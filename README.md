@@ -17,3 +17,9 @@ BNET_SECRET=
 HOST=http://localhost
 PORT=3000
 ```
+
+Run Server
+---------------
+```bash
+$ node server.js
+```
