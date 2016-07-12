@@ -26,7 +26,7 @@ passport.deserializeUser(function(obj, done) {
 passport.use(new BnetStrategy({
     clientID: BNET_ID,
     clientSecret: BNET_SECRET,
-    callbackURL: HOST + "/auth/bnet/callback"
+    callbackURL: HOST + ":" + PORT + "/auth/bnet/callback"
 }, function(accessToken, refreshToken, profile, done) {
     return done(null, profile);
 }));
@@ -50,7 +50,6 @@ app.get('/auth/bnet',
 app.get('/auth/bnet/callback',
         passport.authenticate('bnet', { failureRedirect: '/' }),
         function(req, res){
-          console.log("callback")
           res.redirect('/');
         });
 

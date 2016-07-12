@@ -8,3 +8,12 @@ $ mkdir battle.net-oauth
 $ cd battle.net-oauth
 $ npm install
 ```
+
+Create .env file
+---------------
+```bash
+BNET_ID=
+BNET_SECRET=
+HOST=http://localhost
+PORT=3000
+```
